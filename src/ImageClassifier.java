@@ -1,6 +1,7 @@
 import java.awt.*;
 
 public class ImageClassifier {
+    //Takes a Picture as an input and return an 1 dimensional aray of greyscale value of picture in row major order
     public static double [] extractFeatures(Picture picture)
     {
         int width = picture.width();
