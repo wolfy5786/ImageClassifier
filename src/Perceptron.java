@@ -7,10 +7,7 @@ public class Perceptron {
     {
         this.n=n;
         weights =new double[n];
-        for(int i=0;i<weights.length;i++)
-        {
-            weights[i]=0.0;
-        }
+        Arrays.fill(weights, 0.0);
     }
     public int numberOfInputs()
     {
@@ -54,7 +51,7 @@ public class Perceptron {
                 ", n=" + n +
                 '}';
     }
-    public static void main (String args[])
+    public static void main (String[] args)
     {
         double [] w = {1,2,3,1};
         Perceptron perceptron = new Perceptron(10);
