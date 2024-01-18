@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 public class MultiPerceptron {
     int m;  //no of labels
@@ -54,7 +53,7 @@ public class MultiPerceptron {
         String s=" ";
         for(int i=0;i<m;i++)
         {
-            s=s+" {"+perceptrons[i].toString()+"} ";
+            s+=" {"+perceptrons[i].toString()+"} ";
         }
         return "MultiPerceptron{" +
                 "m=" + m +
@@ -64,11 +63,23 @@ public class MultiPerceptron {
                 '}';
     }
 
-    public static void main (String args[])
+    public static void main (String [] args)
     {
         int n=3;
         int m=2;
-        MultiPerceptron multiPerceptron =new MultiPerceptron(2,2);
+        MultiPerceptron multiPerceptron =new MultiPerceptron(m,n);
+        StdOut.println(multiPerceptron.toString());
+        double [] training1 = {5.0,-4.0,3.0};
+        double [] training2 = {2.0,3.0,-2.0};
+        double [] training3 = {4.0,3.0,2.0};
+        double [] training4 = {-6.0,-5.0,7.0};
+        multiPerceptron.trainMulti(training1,1);
+        StdOut.println(multiPerceptron.toString());
+        multiPerceptron.trainMulti(training2,0);
+        StdOut.println(multiPerceptron.toString());
+        multiPerceptron.trainMulti(training3,1);
+        StdOut.println(multiPerceptron.toString());
+        multiPerceptron.trainMulti(training4,0);
         StdOut.println(multiPerceptron.toString());
     }
 }
