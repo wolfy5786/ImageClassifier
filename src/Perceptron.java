@@ -53,9 +53,21 @@ public class Perceptron {
     }
     public static void main (String[] args)
     {
-        double [] w = {1,2,3,1};
-        Perceptron perceptron = new Perceptron(10);
+        Perceptron perceptron = new Perceptron(3);
         StdOut.println(perceptron.toString());
-        StdOut.println(perceptron.weightedSum(w));
+        double [] training1 = {5.0,-4.0,3.0};
+        double [] training2 = {2.0,3.0,-2.0};
+        double [] training3 = {4.0,3.0,2.0};
+        double [] training4 = {-6.0,-5.0,7.0};
+        StdOut.println(perceptron.toString());
+        perceptron.train(training1, +1);
+        StdOut.println(perceptron.toString());
+        perceptron.train(training2, -1);
+        StdOut.println(perceptron.toString());
+        perceptron.train(training3, +1);
+        StdOut.println(perceptron.toString());
+        perceptron.train(training4, -1);
+        StdOut.println(perceptron.toString());
+
     }
 }
