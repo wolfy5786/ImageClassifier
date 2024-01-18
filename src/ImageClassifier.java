@@ -37,7 +37,7 @@ public class ImageClassifier {
         while(training.hasNextLine())
         {
             s=training.readString();
-            s="Dig/"+s;
+            //s="Dig/"+s;
             label=training.readInt();
             training.readLine();
             Picture picture= new Picture(s);
@@ -73,8 +73,7 @@ public class ImageClassifier {
                 incoorect++;
             }
         }
-        System.out.println(correct+" "+incoorect);
-
+        System.out.println("correct: "+correct+"; incorrect: "+incoorect);
     }
     public static void main (String [] args)
     {
